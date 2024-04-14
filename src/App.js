@@ -24,7 +24,23 @@ const fetchCompletion = async (prompt, setResponse) => {
 
 const createPrompt = (ingredients, modifier1, modifier2) => {
   return `Based on the following ingredients, generate a recipe for a ${modifier1} ${modifier2}, 
-  and start the response with a JSON-like list of ingredients used: ${JSON.stringify(ingredients)}.`;
+  format the recipe into a JSON-like list like {
+    "ingredients": {
+      "name": {"unit": "unit", "quantity": quantity},
+      "name": {"unit": "unit", "quantity": quantity},
+      ...
+      
+    },
+    "recipe": {
+      "title": "title",
+      "instructions": [
+        "step 1...",
+        "step 2...",
+        "step 3...",
+        ...
+      ]
+    }
+  }, ${JSON.stringify(ingredients)}.`;
 };
 
 
