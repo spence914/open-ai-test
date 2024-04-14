@@ -146,6 +146,14 @@ const pantry = {
   lemons: {
       unit: "pieces",
       quantity: 4
+  },
+  pears: {
+      unit: "pieces",
+      quantity: 69
+  },
+  beefJerky: {
+      unit: "pieces",
+      quantity: 69
   }
 };
 
