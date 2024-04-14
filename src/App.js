@@ -43,6 +43,15 @@ function App() {
   return (
     <div className="App">
   <header className="App-header">
+  <h1>Welcome to Your Virtual Pantry</h1>
+        <div className="pantry-list">
+          <h2>Available Ingredients:</h2>
+          <ul>
+            {Object.keys(pantry).map((ingredient) => (
+              <li key={ingredient}>{ingredient}</li>
+            ))}
+          </ul>
+        </div>
     <h1>What type of meal would you like to make?</h1>
     <form id="queryForm" onSubmit={(e) => handleSubmit(e, setResponse)}>
       
